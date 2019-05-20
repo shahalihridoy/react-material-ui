@@ -1,0 +1,63 @@
+@import "./styles/views/header";
+@import "./styles/utils/spacing";
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar,
+.container {
+  position: relative;
+  overflow: hidden;
+  transition: all 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.container {
+  background: #f2f2f2;
+}
+
+.sidebar-full {
+  .sidebar {
+    width: 220px;
+  }
+  .container {
+    width: calc(100% - 220px);
+  }
+}
+
+.sidebar-close {
+  .sidebar {
+    width: 0px;
+  }
+  .container {
+    width: 100%;
+  }
+}
+
+.sidebar-compact {
+  .sidebar {
+    width: 64px;
+  }
+  .container {
+    width: calc(100% - 64px);
+  }
+}
+
+.sidebar-mobile {
+  .sidebar {
+    width: 220px;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .container {
+    width: 100%;
+    // width: calc(100% - 220px);
+  }
+}
